@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: jan_natis@hotmail.com
+Date: Tue, 08 Nov 2022 13:40:29 -0000
+Message-ID: <166791482937.1692.11020998623444972629@Janaina>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MQ/bekonh-8df55597ab98d02e35740de7eb2ede03/
+
+Your username, in case you’ve forgotten: jan_n
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
