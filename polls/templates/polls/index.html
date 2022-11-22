@@ -1,13 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'polls/style.css' %}">
 
-{% if latest_question_list %}
-    <ul>
+<div class="px-4 py-5 my-5 text-center">
+    <h1>Choose a question</h1>
+
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+    {% if latest_question_list %}
     {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>>
+
+
+<button type="button" class="btn btn-outline-secondary btn-lg px-4"> <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li></button>
+
     {% endfor %}
-    </ul>
+
+
 {% else %}
+
+
     <p>No polls are available.</p>
 {% endif %}
+
+        </div>
+    </div>
+
+{% endblock %}

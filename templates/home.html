@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+ {% load static %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<div class="px-4 py-5 my-5 text-center">
+
+<ul>
+<h1 class="display-5 fw-bold"> Welcome {{ user.username }}!</h1>
+
+</ul>
+
+<!--I add the index to bring me to the questions-->
+
+    <div class="btn-group-vertical-center" >
+ <p><button type="button"  class="btn btn-outline-primary me-2" ><a href="{% url 'polls:index' %}"> Index </a> </button>  </p>
+  <p><button type="button" class="btn btn-outline-primary me-2"  > <a href="{% url 'logout' %}">Log Out</a>   </button>    </p>
+  <p><button type="button" class="btn btn-outline-primary me-2"  >  <a href="{% url 'password_reset' %}">Reset Password</a></button></p>
+    </div>
+
+</div>
+
+
+{% else %}
+
+<div class="px-4 py-5 my-5 text-center">
+<h3>Sorry, you are not logged in</h3>
+
+
+  <button type="submit" class="btn btn-outline-primary me-2">  <a href="{% url 'login' %}" >Log In</a></button>
+
+</div>
+{% endif %}
+{% endblock %}
