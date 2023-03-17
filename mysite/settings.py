@@ -50,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware', # Here I will enable Django's built-in XSS protection middleware
+    # This middleware add the X-XSS-Protection header to HTTP responses, which instructs the browser to block any XSS attacks
 ]
 
 ROOT_URLCONF = 'mysite.urls'
