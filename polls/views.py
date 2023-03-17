@@ -4,7 +4,30 @@ from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
 
+
+from django.http import QueryDict
+from django.db.models import Q
+import polls.models
+
 from .models import Choice, Question
+
+# Here I will validate user input and prevent SQL injection by using Django's QueryDict and django.db.models classes
+# I used Django's QueryDict class to parse the request's query parameters, and validate them before passing them to the database query.
+# I also use Django's Q objects to construct the WHERE clause of the SQL query in a way that prevents SQL injection attacks.
+def my_view(request):
+    query_params = request.GET or request.POST
+    query_dict = QueryDict(query_params)
+
+    # Perform input validation on the query parameters
+    param1 = query_dict.get('param1')
+    param2 = query_dict.get('param2')
+
+    if not param1 or not param2:
+        return HttpResponseBadRequest('Missing query parameters')
+
+    # Prevent SQL injection using Django's Q objects
+    my_model_objects = MyModel.objects.filter(Q(param1=param1) & Q(param2=param2))
+
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
