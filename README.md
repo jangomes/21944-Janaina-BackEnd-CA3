@@ -1,8 +1,8 @@
 21944 - Janaina Gomes
 
-<h1> BSC30921 - Back-end Web Development - Continuous Assessment 3 </h1>
+<h2> BSC30921 - Back-end Web Development - Continuous Assessment 3 </h2>
 
-ASSIGNMENT SOLUTION:
+- <h4> ASSIGNMENT SOLUTION:</h4>
 
 Basically, the testing methodology used is a combination of manual and automated testing. Manual testing is performed using the Django test client, which sends HTTP requests to the application and verifies the responses. In this case, the manual tests are verifying that the status code is 200 and that the correct template is being used for the enrollment page.
 Automated testing is performed using the pytest-django library, which allows for more dynamic testing of Django applications. The tests are generating test data for the user form and using the RequestFactory to create test requests for the SignUpView. The tests are verifying that the status code and URL are correct for the success case and that the correct template is being used for the failure case.
@@ -10,7 +10,7 @@ The test coverage for this code is focused on the app's subscription functionali
 
 
 
-Bibliography:
+<h4> Bibliography: </h4>
 
 Docs, R. t. (n.d.). Testing in Django. Retrieved from Django: https://docs.djangoproject.com/en/3.2/topics/testing/
 
