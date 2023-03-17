@@ -6,7 +6,9 @@
 
 Basically, the testing methodology used is a combination of manual and automated testing. Manual testing is performed using the Django test client, which sends HTTP requests to the application and verifies the responses. In this case, the manual tests are verifying that the status code is 200 and that the correct template is being used for the enrollment page.
 Automated testing is performed using the pytest-django library, which allows for more dynamic testing of Django applications. The tests are generating test data for the user form and using the RequestFactory to create test requests for the SignUpView. The tests are verifying that the status code and URL are correct for the success case and that the correct template is being used for the failure case.
-The test coverage for this code is focused on the app's subscription functionality. He is testing that the sign-up page is accessible, the correct template is being used, and the sign-up form is working. It's also testing success and failure cases for the signup form, ensuring the application handles errors properly.
+The test coverage for this code is focused on the app's subscription functionality. He is testing that the sign-up page is accessible, the correct template is being used, and the sign-up form is working. It's also testing success and failure cases for the signup form, ensuring the application handles errors properly. 
+
+To make the code more secure, I used cross-site scripting (xss) protection using Django's built-in security features. In my setting.py I added a line in the middleware adds the x-xss-protection header to HTTP responses, which instructs the browser to block any xss attacks. I used Django's  class to parse the request's query parameters, and validate them before passing them to the database query, I used Django's Q objects to construct the where clause of the SQL query in a way that prevents SQL injection attacks.
 
 
 
