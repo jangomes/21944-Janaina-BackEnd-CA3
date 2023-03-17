@@ -14,6 +14,10 @@ To make the code more secure, I used cross-site scripting (xss) protection using
 
 <h4> Bibliography: </h4>
 
+Docs, R. t. (n.d.). Making queries. Retrieved from Django: https://docs.djangoproject.com/en/3.2/topics/db/queries/#complex-lookups-with-q-objects
+
+Docs, R. t. (n.d.). Middleware. Retrieved from Django: https://docs.djangoproject.com/en/4.1/ref/middleware/
+
 Docs, R. t. (n.d.). Testing in Django. Retrieved from Django: https://docs.djangoproject.com/en/3.2/topics/testing/
 
 Santos, A. And Herman, M.  (n.d.). Testing in Django (Part 1) – Best Practices and Examples. Retrieved from Real Python: https://realpython.com/testing-in-django-part-1-best-practices-and-examples/
