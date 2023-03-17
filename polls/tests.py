@@ -5,7 +5,7 @@ from django.utils import timezone
 
 from .models import Question
 
-
+# That are tests for both the Question model and the views that render it
 class QuestionModelTests(TestCase):
 
     def test_was_published_recently_with_future_question(self):
