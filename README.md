@@ -1,12 +1,18 @@
-BSC30921 - Back-end Web Development - Continuous Assessment 2
+BSC30921 - Back-end Web Development - Continuous Assessment 3
 
 ASSIGNMENT SOLUTION:
 
-Basically, you can signup at the site, the data is going to be retrieve at the data base mySQLdatabase and you can login and logout. It was built with a user authentication system, the Django system installed the auth in its apps and I added this to my project to avoid people that are not logged in to vote. Is possible to reset your password and sign in again. You can see the homepage after logged in at this home page you can click at the vote that is going to bring you to the vote page and you can choose to vote, see the results and choose to leave or vote again. If you are logged in as an administrator you can see the available functions like adding or changing groups, users and questions. The project has a certain complexity where it is possible to create operations such as read, update and delete. 
+Basically, the testing methodology used is a combination of manual and automated testing. Manual testing is performed using the Django test client, which sends HTTP requests to the application and verifies the responses. In this case, the manual tests are verifying that the status code is 200 and that the correct template is being used for the enrollment page.
+Automated testing is performed using the pytest-django library, which allows for more dynamic testing of Django applications. The tests are generating test data for the user form and using the RequestFactory to create test requests for the SignUpView. The tests are verifying that the status code and URL are correct for the success case and that the correct template is being used for the failure case.
+The test coverage for this code is focused on the app's subscription functionality. He is testing that the sign-up page is accessible, the correct template is being used, and the sign-up form is working. It's also testing success and failure cases for the signup form, ensuring the application handles errors properly.
 
 
 
 Bibliography:
+
+Docs, R. t. (n.d.). Testing in Django. Retrieved from Django: https://docs.djangoproject.com/en/3.2/topics/testing/
+
+Santos, A. And Herman, M.  (n.d.). Testing in Django (Part 1) – Best Practices and Examples. Retrieved from Real Python: https://realpython.com/testing-in-django-part-1-best-practices-and-examples/
 
 Docs, R. t. (n.d.). Writing your first Django app. Retrieved from Django: https://docs.djangoproject.com/en/4.1/intro/tutorial01/
 
