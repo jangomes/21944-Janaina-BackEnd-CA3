@@ -3,14 +3,14 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 import unittest
 
-# CA3 Add manual testing using one of the unit test libraries and one or more module/function.
+# CA3 Add testing using one of the unit test libraries and one or more module/function.
 #File for development
 
 # python manage.py test accounts.tests
 # I used pip install pytest to install the pytest library
 
-# Add manual testing using one of the unit test libraries and one or more module/function
-# run the manual test with this code: python manage.py test accounts.tests
+
+# run the test with this code: python manage.py test accounts.tests
 class TestSignUpView(TestCase):
 
     # This is a Django built in test client to test the sign up page
